@@ -13,8 +13,8 @@ const pageConfig: PageConfig = {
   // If not specified, all monitors will be shown in a single list
   // If specified, monitors will be grouped and ordered, not-listed monitors will be invisble (but still monitored)
   group: {
-    '🌐 Public (example group name)': ['foo_monitor', 'bar_monitor', 'more monitor ids...'],
-    '🔐 Private': ['test_tcp_monitor'],
+    '🌐 Public (example group name)': [],
+    '🔐 Private': ['Alist','RSSHub','青龙','RSSHub','lobeChat','meTube','frps'],
   },
 }
 
@@ -25,54 +25,81 @@ const workerConfig: WorkerConfig = {
   // passwordProtection: 'username:password',
   // Define all your monitors here
   monitors: [
-    // Example HTTP Monitor
     {
-      // `id` should be unique, history will be kept if the `id` remains constant
-      id: 'foo_monitor',
-      // `name` is used at status page and callback message
-      name: 'My API Monitor',
-      // `method` should be a valid HTTP Method
-      method: 'POST',
-      // `target` is a valid URL
-      target: 'https://example.com',
-      // [OPTIONAL] `tooltip` is ONLY used at status page to show a tooltip
-      tooltip: 'This is a tooltip for this monitor',
-      // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
-      statusPageLink: 'https://example.com',
-      // [OPTIONAL] `hideLatencyChart` will hide status page latency chart if set to true
-      hideLatencyChart: false,
-      // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx
-      expectedCodes: [200],
-      // [OPTIONAL] `timeout` in millisecond, if not specified, default to 10000
-      timeout: 10000,
-      // [OPTIONAL] headers to be sent
-      headers: {
-        'User-Agent': 'Uptimeflare',
-        Authorization: 'Bearer YOUR_TOKEN_HERE',
-      },
-      // [OPTIONAL] body to be sent
-      body: 'Hello, world!',
-      // [OPTIONAL] if specified, the response must contains the keyword to be considered as operational.
-      responseKeyword: 'success',
-      // [OPTIONAL] if specified, the response must NOT contains the keyword to be considered as operational.
-      responseForbiddenKeyword: 'bad gateway',
-      // [OPTIONAL] if specified, will call the check proxy to check the monitor, mainly for geo-specific checks
-      // refer to docs https://github.com/lyc8503/UptimeFlare/wiki/Check-proxy-setup before setting this value
-      // currently supports `worker://` and `http(s)://` proxies
-      checkProxy: 'https://xxx.example.com OR worker://weur',
-      // [OPTIONAL] if true, the check will fallback to local if the specified proxy is down
-      checkProxyFallback: true,
-    },
-    // Example TCP Monitor
-    {
-      id: 'test_tcp_monitor',
-      name: 'Example TCP Monitor',
+      id: 'Alist',
+      name: 'Alist',
       // `method` should be `TCP_PING` for tcp monitors
       method: 'TCP_PING',
       // `target` should be `host:port` for tcp monitors
-      target: '1.2.3.4:22',
-      tooltip: 'My production server SSH',
-      statusPageLink: 'https://example.com',
+      target: '64.69.37.142:5244',
+      tooltip: 'Alist',
+      statusPageLink: 'https://64.69.37.142:5244/',
+      timeout: 5000,
+    },
+    {
+      id: 'RSSHub',
+      name: 'RSSHub',
+      // `method` should be `TCP_PING` for tcp monitors
+      method: 'TCP_PING',
+      // `target` should be `host:port` for tcp monitors
+      target: '64.69.37.142:1200',
+      tooltip: 'RSSHub',
+      statusPageLink: 'http://64.69.37.142:1200/',
+      timeout: 5000,
+    },
+    {
+      id: '青龙',
+      name: '青龙',
+      // `method` should be `TCP_PING` for tcp monitors
+      method: 'TCP_PING',
+      // `target` should be `host:port` for tcp monitors
+      target: '64.69.37.142:5700',
+      tooltip: '青龙',
+      statusPageLink: 'http://64.69.37.142:5700/',
+      timeout: 5000,
+    },
+    {
+      id: 'RSSHub',
+      name: 'RSSHub',
+      // `method` should be `TCP_PING` for tcp monitors
+      method: 'TCP_PING',
+      // `target` should be `host:port` for tcp monitors
+      target: '64.69.37.142:1200',
+      tooltip: 'RSSHub',
+      statusPageLink: 'http://64.69.37.142:1200/',
+      timeout: 5000,
+    },
+    {
+      id: 'lobeChat',
+      name: 'lobeChat',
+      // `method` should be `TCP_PING` for tcp monitors
+      method: 'TCP_PING',
+      // `target` should be `host:port` for tcp monitors
+      target: '64.69.37.142:3210',
+      tooltip: 'lobeChat',
+      statusPageLink: 'http://64.69.37.142:3210/',
+      timeout: 5000,
+    },
+    {
+      id: 'meTube',
+      name: 'meTube',
+      // `method` should be `TCP_PING` for tcp monitors
+      method: 'TCP_PING',
+      // `target` should be `host:port` for tcp monitors
+      target: '64.69.37.142:8081',
+      tooltip: 'lobeChat',
+      statusPageLink: 'http://64.69.37.142:8081/',
+      timeout: 5000,
+    },
+    {
+      id: 'frps',
+      name: 'frps',
+      // `method` should be `TCP_PING` for tcp monitors
+      method: 'TCP_PING',
+      // `target` should be `host:port` for tcp monitors
+      target: '64.112.43.15:7300',
+      tooltip: 'lobeChat',
+      statusPageLink: 'http://64.112.43.15:7300/',
       timeout: 5000,
     },
   ],
