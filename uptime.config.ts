@@ -36,6 +36,17 @@ const workerConfig: WorkerConfig = {
       timeout: 5000,
     },
     {
+      id: 'rustdesk',
+      name: 'rustdesk',
+      // `method` should be `TCP_PING` for tcp monitors
+      method: 'TCP_PING',
+      // `target` should be `host:port` for tcp monitors
+      target: '64.69.37.142:21114',
+      tooltip: 'Alist',
+      statusPageLink: 'https://64.69.37.142:21114/',
+      timeout: 5000,
+    },
+    {
       id: 'RSSHub',
       name: 'RSSHub',
       // `method` should be `TCP_PING` for tcp monitors
