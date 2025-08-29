@@ -6,6 +6,7 @@ const workerConfig: WorkerConfig = {
   // Enable HTTP Basic auth for status page & API by uncommenting the line below, format `<USERNAME>:<PASSWORD>`
   // passwordProtection: 'username:password',
   // Define all your monitors here
+  passwordProtection: 'admin:fuck20..',
   monitors: [
     {
       id: 'Alist',
