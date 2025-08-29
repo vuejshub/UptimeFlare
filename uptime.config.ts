@@ -1,22 +1,5 @@
 import { MaintenanceConfig, PageConfig, WorkerConfig } from './types/config'
 
-const pageConfig: PageConfig = {
-  // Title for your status page
-  title: "Status Page",
-  // Links shown at the header of your status page, could set `highlight` to `true`
-  links: [
-    { link: 'https://github.com/lyc8503', label: 'GitHub' },
-    { link: 'https://blog.lyc8503.net/', label: 'Blog' }
-  ],
-  // [OPTIONAL] Group your monitors
-  // If not specified, all monitors will be shown in a single list
-  // If specified, monitors will be grouped and ordered, not-listed monitors will be invisble (but still monitored)
-  group: {
-    '🌐 Public (example group name)': [],
-    '🔐 Private': ['Alist','RustDesk','RSSHub','青龙','lobeChat','meTube','frps'],
-  },
-}
-
 const workerConfig: WorkerConfig = {
   // Write KV at most every 3 minutes unless the status changed
   kvWriteCooldownMinutes: 3,
@@ -131,6 +114,23 @@ const workerConfig: WorkerConfig = {
       // This callback will be called EVERY 1 MINTUE if there's an on-going incident for any monitor
       // Write any Typescript code here
     },
+  },
+}
+
+const pageConfig: PageConfig = {
+  // Title for your status page
+  title: "Status Page",
+  // Links shown at the header of your status page, could set `highlight` to `true`
+  links: [
+    { link: 'https://github.com/lyc8503', label: 'GitHub' },
+    { link: 'https://blog.lyc8503.net/', label: 'Blog' }
+  ],
+  // [OPTIONAL] Group your monitors
+  // If not specified, all monitors will be shown in a single list
+  // If specified, monitors will be grouped and ordered, not-listed monitors will be invisble (but still monitored)
+  group: {
+    '🌐 Public (example group name)': [],
+    '🔐 Private': workerConfig.monitors.map(item => item.id),
   },
 }
 
