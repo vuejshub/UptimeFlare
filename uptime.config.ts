@@ -69,28 +69,6 @@ const workerConfig: WorkerConfig = {
       timeout: 5000,
     },
     {
-      id: 'RSSHub',
-      name: 'RSSHub',
-      // `method` should be `TCP_PING` for tcp monitors
-      method: 'TCP_PING',
-      // `target` should be `host:port` for tcp monitors
-      target: '64.69.37.142:1200',
-      tooltip: 'RSSHub',
-      statusPageLink: 'http://64.69.37.142:1200/',
-      timeout: 5000,
-    },
-    {
-      id: 'lobeChat',
-      name: 'lobeChat',
-      // `method` should be `TCP_PING` for tcp monitors
-      method: 'TCP_PING',
-      // `target` should be `host:port` for tcp monitors
-      target: '64.69.37.142:3210',
-      tooltip: 'lobeChat',
-      statusPageLink: 'http://64.69.37.142:3210/',
-      timeout: 5000,
-    },
-    {
       id: 'meTube',
       name: 'meTube',
       // `method` should be `TCP_PING` for tcp monitors
