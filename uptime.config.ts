@@ -13,7 +13,7 @@ const pageConfig: PageConfig = {
   // If specified, monitors will be grouped and ordered, not-listed monitors will be invisble (but still monitored)
   group: {
     '🌐 Public (example group name)': [],
-    '🔐 Private': ['Alist','RSSHub','青龙','RSSHub','lobeChat','meTube','frps'],
+    '🔐 Private': ['Alist','RustDesk','RSSHub','青龙','lobeChat','meTube','frps'],
   },
 }
 
