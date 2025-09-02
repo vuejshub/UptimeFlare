@@ -9,17 +9,6 @@ const workerConfig: WorkerConfig = {
   passwordProtection: 'admin:fuck20..',
   monitors: [
     {
-      id: 'code-server',
-      name: 'code-server',
-      // `method` should be `TCP_PING` for tcp monitors
-      method: 'TCP_PING',
-      // `target` should be `host:port` for tcp monitors
-      target: '64.69.37.142:8443',
-      tooltip: 'Alist',
-      statusPageLink: 'https://64.69.37.142:8443/',
-      timeout: 5000,
-    },
-    {
       id: 'NPM',
       name: 'NPM',
       // `method` should be `TCP_PING` for tcp monitors
